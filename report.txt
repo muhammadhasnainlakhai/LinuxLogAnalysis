@@ -1,0 +1,24 @@
+=== LINUX LOG ANALYSIS REPORT ===
+Log file analysed : logs/sample_auth.log
+Total failed logins     : 14
+Total successful logins : 3
+
+--- Failed logins per IP ---
+203.0.113.45       8
+198.51.100.23      4
+192.168.1.15       1
+192.0.2.77         1
+
+--- Most targeted usernames ---
+root               8
+kali               2
+admin              2
+test               1
+oracle             1
+
+--- SUSPICIOUS IPs (>= 3 failed attempts) ---
+[ALERT] 203.0.113.45 made 8 failed attempts (possible brute force)
+[ALERT] 198.51.100.23 made 4 failed attempts (possible brute force)
+
+--- Success after failures (check these) ---
+[WARN] 192.168.1.15 failed and then logged in successfully

@@ -1,0 +1,17 @@
+Nov  8 09:01:12 kali sshd[2101]: Accepted password for kali from 192.168.1.10 port 50122 ssh2
+Nov  8 09:05:33 kali sshd[2110]: Failed password for kali from 192.168.1.15 port 50410 ssh2
+Nov  8 09:05:41 kali sshd[2110]: Accepted password for kali from 192.168.1.15 port 50412 ssh2
+Nov  8 09:14:05 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41022 ssh2
+Nov  8 09:14:09 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41026 ssh2
+Nov  8 09:14:13 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41030 ssh2
+Nov  8 09:14:17 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41034 ssh2
+Nov  8 09:14:21 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41038 ssh2
+Nov  8 09:14:25 kali sshd[2144]: Failed password for root from 203.0.113.45 port 41042 ssh2
+Nov  8 09:20:02 kali sshd[2170]: Failed password for invalid user admin from 198.51.100.23 port 33001 ssh2
+Nov  8 09:20:06 kali sshd[2170]: Failed password for invalid user admin from 198.51.100.23 port 33005 ssh2
+Nov  8 09:20:10 kali sshd[2170]: Failed password for invalid user test from 198.51.100.23 port 33009 ssh2
+Nov  8 09:20:14 kali sshd[2170]: Failed password for invalid user oracle from 198.51.100.23 port 33013 ssh2
+Nov  8 09:31:44 kali sshd[2201]: Failed password for kali from 192.0.2.77 port 45511 ssh2
+Nov  8 09:45:10 kali sshd[2230]: Accepted password for kali from 192.168.1.10 port 50230 ssh2
+Nov  8 10:02:19 kali sshd[2255]: Failed password for root from 203.0.113.45 port 41100 ssh2
+Nov  8 10:02:23 kali sshd[2255]: Failed password for root from 203.0.113.45 port 41104 ssh2

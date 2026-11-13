@@ -1,8 +1,8 @@
 # Linux Log Analysis
 
-**Author:** Muhammad Hasnain
-**Internship:** Zynvex Internship (Cybersecurity) | **Project #129**
-**Environment:** Kali Linux (VirtualBox), Python 3
+- **Author:** Muhammad Hasnain
+- **Internship:** Zynvex Internship (Cybersecurity) | **Project #129**
+- **Environment:** Kali Linux (VirtualBox), Python 3
 
 A Python tool that analyzes Linux SSH authentication logs, counts failed and successful logins, and flags IP addresses that look like brute-force attacks.
 
@@ -27,7 +27,7 @@ Log files record everything that happens on a system, and analyzing them is a da
 - Most targeted usernames (for example `root`)
 - Suspicious IP detection (default threshold: 3 or more failed attempts)
 - Warning when an IP fails and then logs in successfully
-- Report saved to `reports/report.txt`
+- Report saved to `report.txt`
 
 **Technologies**
 - Python 3 (`re` and `collections` modules, no external libraries)
@@ -39,14 +39,14 @@ Log files record everything that happens on a system, and analyzing them is a da
 ```
 LinuxLogAnalysis/
 ├── analyze.py              # main script
-├── logs/
-│   └── sample_auth.log     # sample SSH authentication log (17 entries)
-├── reports/
-│   └── report.txt          # generated report
-├── screenshots/            # screenshots used in the documentation
-└── docs/
-    ├── Project_Report.pdf  # full project report
-    └── workflow.png        # workflow diagram
+├── sample_auth.log         # sample SSH authentication log (17 entries)
+├── report.txt              # generated report
+├── 01_sample_log.png       # screenshot: sample log
+├── 02_script_output.png    # screenshot: script output
+├── 03_verification.png     # screenshot: manual verification
+├── workflow.png            # workflow diagram
+├── Project_Report.pdf      # full project report
+└── README.md
 ```
 
 ## 4. Installation and Setup
@@ -54,10 +54,9 @@ LinuxLogAnalysis/
 Requirements: Linux (tested on Kali Linux) and Python 3. No extra packages are needed.
 
 ```bash
-git clone https://github.com/<your-username>/LinuxLogAnalysis.git
+git clone https://github.com/muhammadhasnainlakhai/LinuxLogAnalysis.git
 cd LinuxLogAnalysis
 python3 --version
-mkdir -p reports
 ```
 
 ## 5. Usage
@@ -73,30 +72,30 @@ To analyze another log file, change the `LOG` variable at the top of `analyze.py
 **Manual verification with Linux commands**
 
 ```bash
-grep -c "Failed" logs/sample_auth.log
-grep "Failed" logs/sample_auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
+grep -c "Failed" sample_auth.log
+grep "Failed" sample_auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
 ```
 
 **Screenshots**
 
 Sample log:
-![Sample log](screenshots/01_sample_log.png)
+![Sample log](01_sample_log.png)
 
 Script output:
-![Script output](screenshots/02_script_output.png)
+![Script output](02_script_output.png)
 
 Manual verification:
-![Verification](screenshots/03_verification.png)
+![Verification](03_verification.png)
 
 ## 6. System Workflow / Architecture
 
-![Workflow](docs/workflow.png)
+![Workflow](workflow.png)
 
 1. The script reads the SSH authentication log line by line.
 2. A regular expression extracts the time, result (Failed or Accepted), username, and source IP.
 3. Counters store failures per IP and per username, and the result history of each IP.
 4. Detection rules flag IPs with 3 or more failures and IPs that fail and then succeed.
-5. The report is printed on screen and saved to `reports/report.txt`.
+5. The report is printed on screen and saved to `report.txt`.
 
 ## 7. Testing and Results
 

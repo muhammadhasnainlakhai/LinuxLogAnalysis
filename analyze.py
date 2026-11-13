@@ -1,7 +1,7 @@
 import re
 from collections import Counter, defaultdict
 
-LOG = "logs/sample_auth.log"
+LOG = "sample_auth.log"
 THRESHOLD = 3   # failed attempts after which an IP is flagged
 
 pattern = re.compile(r"(\w+\s+\d+\s[\d:]+).*?(Failed|Accepted) password for (?:invalid user )?(\S+) from (\S+)")
@@ -50,5 +50,5 @@ for ip, h in history.items():
 
 text = "\n".join(out)
 print(text)
-with open("reports/report.txt", "w") as r:
+with open("report.txt", "w") as r:
     r.write(text + "\n")
